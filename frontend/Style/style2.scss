@@ -63,7 +63,7 @@ body {
       width: 50%;
       height: 30vh;
       border-radius: 20px;
-      margin: 1% auto 2%;
+      margin: 1% auto 1%;
       display: block;
     }
   }
@@ -116,7 +116,7 @@ body {
 .container {
   width: 100%;
   height: auto;
-  padding: 0 0 2%;
+  padding: 0 0 1%;
   @include column;
   display: flex;
   justify-content: space-between;
@@ -169,7 +169,7 @@ body {
 .case {
   width: 100%;
   height: 95px;
-  margin: 0 0 3%;
+  margin: 0 0 1%;
   background-color: white;
   border-radius: 20px;
   @include shadow;
@@ -358,7 +358,7 @@ body {
 
 .blocFooter {
   width: 100%;
-  min-height: 200px;
+  min-height: 150px;
   padding-left: 5%;
   background-color: $footer;
   color: white;
@@ -372,7 +372,7 @@ body {
 }
 
 .list {
-  padding: 0 0 10%;
+  padding: 0 0 2%;
   line-height: 2em;
   list-style-type: none;
 
