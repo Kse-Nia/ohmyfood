@@ -1,1 +1,184 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Ohmyfood entreprise de commande de repas en ligne. Vous pouvez composer votre menu à l'avance puis venir récupérer votre commande sur place."><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15/css/all.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Style/style.css"><link rel="stylesheet" type="text/css" href="./Style/animations.scss"><script src="https://kit.fontawesome.com/1f6041ea80.js" crossorigin="anonymous"></script><link rel="icon" href="https://img.icons8.com/nolan/64/restaurant.png"><title>OhMyFood</title></head><body><div class="loader"><div class="loader__container"><img class="ico ico__1" alt="icon du chargement" src="./icons/vegan-food.svg"> <img class="ico ico__2" alt="icon du chargement" src="./icons/salad.svg"> <img class="ico ico__3" alt="icon du chargement" src="./icons/cooking.svg"> <img class="ico ico__4" alt="icon du chargement" src="./icons/7681067611604779598.svg"> <img class="ico ico__5" alt="icon du chargement" src="./icons/iconfinder_bibimbub_3377053.svg"></div></div><header class="header"><h1>ohmyfood</h1></header><main><div class="localisation"><i class="fas fa-map-marker-alt localisation__localicon"></i><span class="localtext">Paris, Belleville</span></div><section class="reservation"><h2 class="reservation__title">Réservez le menu qui vous convient</h2><p class="reservation__title">Découvrez des restaurants d'exception, sélectionés par nos soins</p><button class="bouton">Explorer nos restaurants</button></section><div class="commande"><h2 class="commande__title">Fonctionnement</h2><div class="commande__container"><div class="bloc"><div class="bloc__cercle">1</div><button class="bloc__btn"><span class="bloc__text"><i class="icon fas fa-mobile-alt"></i>Choisissez un restaurant</span></button></div><div class="bloc"><div class="bloc__cercle">2</div><button class="bloc__btn"><span class="bloc__text"><i class="icon fas fa-list-ul"></i>Composez votre menu</span></button></div><div class="bloc"><div class="bloc__cercle">3</div><button class="bloc__btn"><span class="bloc__text"><i class="icon fas fa-store"></i>Dégustez au restaurant</span></button></div></div></div><section class="restaurants"><h2 class="restaurants__title">Restaurants</h2><div class="container"><a class="carte" href="./menu_palette.html"><img class="carte__img" src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo d'une assiette avec du poisson avec salade"><div class="carte__new"><p>Nouveau</p></div><div class="presentation"><div class="presentation__texte"><h3>La Palette du goût</h3><p>Ménilmontant</p></div><div class="favoris"><span><i class="far fa-heart favoris__vide"></i></span><span><i class="fas fa-heart favoris__plein"></i></span></div></div></a><a class="carte" href="./menu_note.html"><img class="carte__img" src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo d'une assiette avec de la viande et olives"><div class="carte__new"><p>Nouveau</p></div><div class="presentation"><div class="presentation__texte"><h3>La note enchantée</h3><p>Charonne</p></div><div class="favoris"><span><i class="far fa-heart favoris__vide"></i></span><span><i class="fas fa-heart favoris__plein"></i></span></div></div></a><a class="carte" href="./menu_français.html"><img class="carte__img" src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo d'une assiette avec un oeuf poché sur un toast"><div class="presentation"><div class="presentation__texte"><h3>A la française</h3><p>Cité Rouge</p></div><div class="favoris"><i class="far fa-heart favoris__vide"></i><i class="fas fa-heart favoris__plein"></i></div></div></a><a class="carte" href="./menu_delice.html"><img class="carte__img" src="./img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo d'une longue assiette avec du poisson et des légumes"><div class="presentation"><div class="presentation__texte"><h3>Le délice des sens</h3><p>Folie-Méricourt</p></div><div class="favoris"><i class="far fa-heart favoris__vide"></i><i class="fas fa-heart favoris__plein"></i></div></div></a></div></section></main><footer class="blocFooter"><p class="blocFooter__logo">ohmyfood</p><ul class="list"><li class="list__lien"><i class="fas fa-utensils"></i><a>Proposer un restaurant</a></li><li class="list__lien"><i class="fas fa-hands-helping"></i><a>Devenir partenaire</a></li><li class="list__lien"><a>Mentions légales</a></li><li class="list__lien"><a class="list__contact" href="mailto:xxx@yz.org">Contact</a></li></ul></footer></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Ohmyfood entreprise de commande de repas en ligne. Vous pouvez composer votre menu à l'avance puis venir récupérer votre commande sur place."
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15/css/all.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="./Style/style.css" />
+    <link rel="stylesheet" type="text/css" href="./Style/animations.scss" />
+    <script
+      src="https://kit.fontawesome.com/1f6041ea80.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="https://img.icons8.com/nolan/64/restaurant." />
+    <title>OhMyFood</title>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="loader__container">
+        <img
+          class="ico ico__1"
+          alt="icon du chargement"
+          src="./icons/vegan-food.svg"
+        />
+        <img
+          class="ico ico__2"
+          alt="icon du chargement"
+          src="./icons/salad.svg"
+        />
+        <img
+          class="ico ico__3"
+          alt="icon du chargement"
+          src="./icons/cooking.svg"
+        />
+        <img
+          class="ico ico__4"
+          alt="icon du chargement"
+          src="./icons/7681067611604779598.svg"
+        />
+        <img
+          class="ico ico__5"
+          alt="icon du chargement"
+          src="./icons/iconfinder_bibimbub_3377053.svg"
+        />
+      </div>
+    </div>
+    <header class="header"><h1>ohmyfood</h1></header>
+    <main>
+      <div class="localisation">
+        <i class="fas fa-map-marker-alt localisation__localicon"></i
+        ><span class="localtext">Paris, Belleville</span>
+      </div>
+      <section class="reservation">
+        <h2 class="reservation__title">Réservez le menu qui vous convient</h2>
+        <p class="reservation__title">
+          Découvrez des restaurants d'exception, sélectionés par nos soins
+        </p>
+        <button class="bouton">Explorer nos restaurants</button>
+      </section>
+      <div class="commande">
+        <h2 class="commande__title">Fonctionnement</h2>
+        <div class="commande__container">
+          <div class="bloc">
+            <div class="bloc__cercle">1</div>
+            <button class="bloc__btn">
+              <span class="bloc__text"
+                ><i class="icon fas fa-mobile-alt"></i>Choisissez un
+                restaurant</span
+              >
+            </button>
+          </div>
+          <div class="bloc">
+            <div class="bloc__cercle">2</div>
+            <button class="bloc__btn">
+              <span class="bloc__text"
+                ><i class="icon fas fa-list-ul"></i>Composez votre menu</span
+              >
+            </button>
+          </div>
+          <div class="bloc">
+            <div class="bloc__cercle">3</div>
+            <button class="bloc__btn">
+              <span class="bloc__text"
+                ><i class="icon fas fa-store"></i>Dégustez au restaurant</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+      <section class="restaurants">
+        <h2 class="restaurants__title">Restaurants</h2>
+        <div class="container">
+          <a class="carte" href="./menu_palette.html"
+            ><img
+              class="carte__img"
+              src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.webp"
+              alt="photo d'une assiette avec du poisson avec salade" />
+            <div class="carte__new"><p>Nouveau</p></div>
+            <div class="presentation">
+              <div class="presentation__texte">
+                <h3>La Palette du goût</h3>
+                <p>Ménilmontant</p>
+              </div>
+              <div class="favoris">
+                <span><i class="far fa-heart favoris__vide"></i></span
+                ><span><i class="fas fa-heart favoris__plein"></i></span>
+              </div></div></a
+          ><a class="carte" href="./menu_note.html"
+            ><img
+              class="carte__img"
+              src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.webp"
+              alt="photo d'une assiette avec de la viande et olives" />
+            <div class="carte__new"><p>Nouveau</p></div>
+            <div class="presentation">
+              <div class="presentation__texte">
+                <h3>La note enchantée</h3>
+                <p>Charonne</p>
+              </div>
+              <div class="favoris">
+                <span><i class="far fa-heart favoris__vide"></i></span
+                ><span><i class="fas fa-heart favoris__plein"></i></span>
+              </div></div></a
+          ><a class="carte" href="./menu_français.html"
+            ><img
+              class="carte__img"
+              src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.webp"
+              alt="photo d'une assiette avec un oeuf poché sur un toast" />
+            <div class="presentation">
+              <div class="presentation__texte">
+                <h3>A la française</h3>
+                <p>Cité Rouge</p>
+              </div>
+              <div class="favoris">
+                <i class="far fa-heart favoris__vide"></i
+                ><i class="fas fa-heart favoris__plein"></i>
+              </div></div></a
+          ><a class="carte" href="./menu_delice.html"
+            ><img
+              class="carte__img"
+              src="./img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+              alt="photo d'une longue assiette avec du poisson et des légumes" />
+            <div class="presentation">
+              <div class="presentation__texte">
+                <h3>Le délice des sens</h3>
+                <p>Folie-Méricourt</p>
+              </div>
+              <div class="favoris">
+                <i class="far fa-heart favoris__vide"></i
+                ><i class="fas fa-heart favoris__plein"></i>
+              </div></div
+          ></a>
+        </div>
+      </section>
+    </main>
+    <footer class="blocFooter">
+      <p class="blocFooter__logo">ohmyfood</p>
+      <ul class="list">
+        <li class="list__lien">
+          <i class="fas fa-utensils"></i><a>Proposer un restaurant</a>
+        </li>
+        <li class="list__lien">
+          <i class="fas fa-hands-helping"></i><a>Devenir partenaire</a>
+        </li>
+        <li class="list__lien"><a>Mentions légales</a></li>
+        <li class="list__lien">
+          <a class="list__contact" href="mailto:xxx@yz.org">Contact</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
