@@ -1,0 +1,129 @@
+@import "./variables";
+@import "./mixin";
+
+
+/* --- Animations Loader --- */
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes zoomin {
+  0% {
+    transform: scale(0.3, 0.3);
+  }
+
+  50% {
+    transform: scale(1.7, 1.7);
+  }
+
+  100% {
+    transform: scale(0.3, 0.3);
+  }
+}
+
+
+/* --- Animations Coeurs --- */
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes gradient {
+	0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+
+  100%{
+opacity: 1;
+  }
+}
+
+/* --- Animations Cartes Menus --- */
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+   opacity: 1;
+  }
+}
+
+
+
+/* --- Animation Check --- */
+
+@keyframes roll-in {
+  0% {
+    transform: translateX(800px) rotate(700deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(100px) rotate(700deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+
+@keyframes roll-back {
+  100% {
+    transform: translateX(800px) rotate(700deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(100px) rotate(700deg);
+    opacity: 1;
+  }
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes appear{
+  0% {
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+   opacity: 1;
+  }
+}
+
+@keyframes translate{
+  0%{
+    transform: translateY(35%);
+  }
+  100%{
+  
+    transform: translateY(0);
+  }
+}

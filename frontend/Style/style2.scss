@@ -1,0 +1,399 @@
+@import "./variables";
+@import "./mixin";
+@import "./animation";
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &__ancre {
+    text-decoration: none;
+    color: black;
+  }
+
+  &__logo {
+    width: 70%;
+    margin: 0 5% 0;
+    padding: 0;
+    font-family: "Shrikhand", cursive;
+    text-align: center;
+
+  }
+
+  &__retour {
+    @include font;
+  }
+}
+
+/* ---------- Partie carte des restaurants ---------- */
+
+.mainMenu {
+  width: 100%;
+
+  &__image {
+    width: 100%;
+    height: 40vh;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: 1000px) {
+      width: 50%;
+      height: 30vh;
+      border-radius: 20px;
+      margin: 1% auto 2%;
+      display: block;
+    }
+  }
+}
+
+.blocMenu {
+  height: 80%;
+  padding: 2% 5% 5%;
+  margin-top: -5%;
+  background-color: $back;
+  border-radius: 20px 20px 0 0;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1000px) {
+    margin: 0 0 1%;
+    border-radius: 20px;
+    display: flex;
+  }
+
+  &__nom {
+    width: 80%;
+  }
+
+  &__titre {
+    width: 100%;
+    margin-bottom: 5%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Shrikhand", cursive;
+  }
+}
+
+.type {
+  width: 10%;
+  padding: 2% 0 2%;
+  margin: 5% 0 5%;
+  border-bottom: 3px solid $tertiaire;
+
+  @media (min-width: 1000px) {
+    margin: 1% 0 0;
+    padding: 1% 0 1%;
+  }
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  padding: 0 0 2%;
+  @include column;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+
+  @media (min-width: 1000px) {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2% 0 2%;
+  }
+
+}
+
+.favoris {
+  width: 10%;
+  margin: 2%;
+  font-size: 1.8em;
+  position: relative;
+
+  &__vide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    visibility: visible;
+    -webkit-background-clip: text;
+  }
+
+  &__plein {
+    -webkit-background-clip: text;
+    color: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+
+    &:hover {
+      -webkit-background-clip: text;
+      color: transparent;
+      background-image: linear-gradient($primaire, $secondaire);
+      -webkit-animation: gradient .3s ease-in;
+      animation: gradient .3s ease-in;
+      transform-origin: top;
+    }
+  }
+}
+
+.case {
+  width: 100%;
+  height: 95px;
+  margin: 0 0 3%;
+  background-color: white;
+  border-radius: 20px;
+  @include shadow;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  -webkit-animation: appear .7s ease-in, translate .360s ease-in-out;
+  animation: appear .7s ease-in, translate .360s ease-in-out;
+  animation-fill-mode: both;
+  transform-origin: top;
+
+  &:hover  &__description {
+    width: 60%;
+    animation-fill-mode: both;
+  }
+
+@for $i from 1 through 3 {
+  &:nth-child(#{$i}) {
+    -webkit-animation-delay: $i * 150ms;
+    animation-delay: $i * 150ms;
+  }
+}
+
+@for $i from 4 through 6 {
+  &:nth-child(#{i}) {
+    -webkit-animation-delay: $i * 300ms;
+    animation-delay: $i * 300ms;
+  }
+}
+
+@for $i from 7 through 10 {
+  &:nth-child(#{i}) {
+    -webkit-animation-delay: $i * 450ms;
+    animation-delay: $i * 450ms;
+  }
+}
+
+@media (min-width: 1000px) {
+  width: 30%;
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+&__description {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0 auto 5%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+}
+
+&__nom {
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 3%;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+&__info {
+  width: 100%;
+  font-family: Roboto, sans-serif;
+  font-weight: lighter;
+  font-size: 0.9em;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+&__prix {
+  width: 15%;
+  height: auto;
+  padding: 70% 0 5%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 1em;
+  font-weight: bold;
+  transition: transform 300ms ease-in;
+}
+
+&__check {
+  background-color: $tertiaire;
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  right: -25%;
+  font-size: 1.4em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 300ms ease-in;
+}
+
+&:hover &__check {
+  transform: translatex(-90%);
+}
+
+&:hover &__prix {
+  transform: translatex(-115%);
+}
+
+&:hover .icon {
+  -webkit-animation: roll-in 360ms forwards 100ms;
+  animation: roll-in 360ms forwards 100ms;
+}
+
+&:hover,
+&:focus,
+&:active {
+  &__description {
+    width: 70%;
+  }
+
+  &__nom {
+    width: 70%;
+  }
+
+  &__info {
+    width: 70%;
+  }
+
+}
+}
+
+.icon {
+  font-size: 1em;
+  color: #ffffff;
+  -webkit-animation: roll-back 360ms forwards;
+  animation: roll-back 360ms forwards;
+}
+
+.wrapbtn {
+  @include centrerow;
+  justify-content: center;
+
+  &__bouton {
+    width: 185px;
+    height: 50px;
+    padding: 0;
+    margin: 2% 0 2%;
+    background: linear-gradient(to bottom, $secondaire 10%, $primaire 100%);
+    border-radius: 25px;
+    border: none;
+    color: #ffffff;
+    font-family: "Roboto";
+    @include font;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: 1000px) {
+      width: 250px;
+      height: 55px;
+      margin: 5% 0 1%;
+    }
+
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    &:after {
+      @include hoverbtn;
+      @include shadow;
+    }
+  }
+}
+
+/* ---------- Footer ---------- */
+
+.blocFooter {
+  width: 100%;
+  min-height: 200px;
+  padding-left: 5%;
+  background-color: $footer;
+  color: white;
+  bottom: 0;
+
+  &__logo {
+    padding: 5% 0 5%;
+    font-family: "Shrikhand", cursive;
+    @include font;
+  }
+}
+
+.list {
+  padding: 0 0 10%;
+  line-height: 2em;
+  list-style-type: none;
+
+  @media (min-width: 1000px) {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .fa-utensils,
+  .fa-hands-helping {
+    padding: 0 3% 0 0;
+  }
+
+  &__lien {
+    text-decoration: none;
+  }
+
+  &__contact {
+    text-decoration: none;
+    color: white;
+  }
+}

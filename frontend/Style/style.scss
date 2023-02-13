@@ -1,0 +1,427 @@
+@import "./variables";
+@import "./mixin";
+@import "./animation";
+
+body,
+html {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+  height: auto !important;
+}
+
+/* ---------- Loader ---------- */
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  @include centrer;
+  z-index: 10000;
+  background: linear-gradient(171deg, rgba(240, 227, 255, 0.897) 0%, rgba(253, 253, 253, 0.947) 100%);
+  animation: loader 1200ms ease-in;
+  animation-delay: 1200ms;
+  animation-fill-mode: both;
+
+  &__container {
+    width: fit-content;
+    height: 15vh;
+    @include centrerow;
+    justify-content: space-between;
+  }
+}
+
+.ico {
+  width: 100%;
+  height: 40%;
+  margin: 0 3% 0;
+  animation: zoomin 900ms 2 linear;
+  animation-fill-mode: backwards;
+
+  &__1 {
+    animation-delay: 100ms;
+  }
+
+  &__2 {
+    animation-delay: 200ms;
+  }
+
+  &__3 {
+    animation-delay: 250ms;
+  }
+
+  &__4 {
+    animation-delay: 350ms;
+  }
+
+  &__5 {
+    animation-delay: 350ms;
+  }
+}
+
+/* ---------- Header ---------- */
+
+.header {
+  width: 100%;
+  height: 65px;
+  @include centrer;
+  font-family: "Shrikhand", cursive;
+  @include shadow;
+}
+
+
+/* ---------- Main ---------- */
+
+.localisation {
+  width: 100%;
+  height: 50px;
+  background-color: #eaeaea;
+  font-weight: 800;
+  @include font;
+  @include centrer;
+
+  &__localicon {
+    margin: 0 2% 0;
+  }
+
+}
+
+.reservation {
+  width: 100%;
+  height: 290px;
+  background-color: $back;
+  @include column;
+  position: relative;
+
+  &__title {
+    width: 80%;
+    text-align: center
+  }
+}
+
+.bouton {
+  width: 220px;
+  height: 15%;
+  margin: 5% 0 5%;
+  background: linear-gradient(to bottom, $secondaire 10%, $primaire 100%);
+  border-radius: 25px;
+  border: none;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 1em;
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &:after {
+    @include hoverbtn;
+    @include shadow;
+  }
+
+  @media (min-width: 1000px) {
+    width: 30%;
+    height: 20%;
+    margin: 5% 0 1%;
+    @include font;
+  }
+
+  @media (min-width: 1500px) {
+    width: 20%;
+    height: 55px;
+    margin: 5% 0 1%;
+  }
+}
+
+/* Partie Fonctionnement */
+
+.commande {
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin: 5% 0 5% 5%;
+  }
+
+  &__container {
+    @include auto;
+    margin: 0 0 5%;
+    @include column;
+  }
+
+  @media (min-width: 1000px) {
+    width: 95%;
+    margin: 1% 2% 1%;
+  }
+}
+
+.bloc {
+  width: 90%;
+  height: auto;
+  @include centrerow;
+  transition: all 0.5s ease-in;
+
+  &__cercle {
+    width: 24px;
+    height: 24px;
+    margin-right: -10px;
+    border-radius: 12px;
+    background-color: $primaire;
+    color: white;
+    z-index: 2;
+    @include centrer;
+  }
+
+  &__btn {
+    width: 100%;
+    min-height: 75px;
+    padding: 0;
+    margin: 5% 0 5%;
+    background-color: $back;
+    font-size: 1em;
+    font-weight: 500;
+    border: none;
+    border-radius: 20px;
+    @include centrerow;
+    @include shadow;
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: 1000px) {
+      min-height: 100px;
+      width: 60%;
+      margin: 1% 0 1%;
+    }
+
+    &:hover {
+      &:after {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $hover;
+      border-radius: 20px;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 300ms;
+    }
+
+    &:hover .icon {
+      color: $primaire;
+    }
+  }
+
+  &__text {
+    width: 80%;
+    padding-left: 5%;
+    text-align: start;
+  }
+}
+
+.icon {
+  padding: 0 5% 0;
+  float: left;
+  color: $icon;
+  font-size: 1.3em;
+}
+
+/* ---------- Partie restaurants ---------- */
+
+.restaurants {
+  @include auto;
+  background-color: $back;
+  padding-bottom: 15%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+
+  &__title {
+    margin: 5% 0 5% 5%;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: black;
+  }
+
+  @media (min-width: 1000px) {
+    width: 95%;
+    border-radius: 10px;
+    margin: 1% 2% 1%;
+    padding-bottom: 2%;
+  }
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  @include column;
+
+  @media (min-width: 1000px) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+}
+
+.carte {
+  width: 90%;
+  height: auto;
+  border-radius: 20px;
+  position: relative;
+  margin-bottom: 5%;
+  @include shadow;
+
+  &__img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
+
+  &__new {
+    width: 80px;
+    height: 30px;
+    margin: 0;
+    background-color: $tertiaire;
+    color: #008766;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    display: block;
+
+    p {
+      margin: 0;
+      text-align: center;
+      font-size: 0.9em;
+      line-height: 30px;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    width: 40%;
+    margin: 1% 2% 1%;
+  }
+}
+
+.presentation {
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
+
+  &__texte {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+    p {
+      padding: 0 0 0 1%;
+    }
+  }
+
+  &__name {
+    margin: 2%;
+  }
+}
+
+.favoris {
+  width: 10%;
+  margin: 2%;
+  font-size: 1.8em;
+  position: relative;
+
+  &__vide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    visibility: visible;
+    -webkit-background-clip: text;
+  }
+
+  &__plein {
+    -webkit-background-clip: text;
+    color:: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+
+    &:hover {
+      -webkit-background-clip: text;
+      color: transparent;
+      background-image: linear-gradient($primaire, $secondaire);
+      animation: gradient .300s ease-in-out;
+      transform-origin: top;
+    }
+  }
+}
+
+/* ---------- Footer ---------- */
+
+.blocFooter {
+  width: 100%;
+  min-height: 200px;
+  padding-left: 5%;
+  background-color: $footer;
+  color: white;
+  bottom: 0;
+
+  &__logo {
+    padding: 5% 0 5%;
+    margin: 0;
+    font-family: "Shrikhand", cursive;
+    @include font;
+
+    @media (min-width:1000px) {
+      font-size: 1.9em;
+    }
+  }
+}
+
+.list {
+  padding: 0 0 10%;
+  margin: 0;
+  line-height: 2em;
+  list-style-type: none;
+
+  @media (min-width: 1000px) {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .fa-utensils,
+  .fa-hands-helping {
+    padding: 0 3% 0 0;
+  }
+
+
+  &__contact {
+    color: white;
+  }
+}

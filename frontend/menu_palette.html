@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="./Style/style2.css" />
+  <script src="https://kit.fontawesome.com/dc59dc2705.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="https://img.icons8.com/nolan/64/restaurant.png" />
+  <title>OhMyFood</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a class="header__ancre" href="./index.html">
+      <i class="fas header__retour fa-arrow-left"></i>
+    </a>
+    <h1 class="header__logo">ohmyfood</h1>
+  </header>
+
+  <!-- Main -->
+  <main class="mainMenu">
+    <img class="mainMenu__image" alt="présentation du plat"
+      src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
+
+    <div class="blocMenu">
+      <div class="blocMenu__titre">
+        <h2 class="blocMenu__nom">La palette du goût</h2>
+        <div class="favoris">
+          <i class="far fa-heart favoris__vide"></i>
+          <i class="fas fa-heart favoris__plein"></i>
+      </div>
+      </div>
+      <h3 class="type">Entrée</h3>
+      <section class="container">
+        <div class="case">
+          <div class="case__description">
+            <h4 class="case__nom">Fricassée d'escargot</h4>
+            <p class="case__info">Au piment d'Espelette</p>
+          </div>
+          <div class="case__prix">25€</div>
+          <div class="case__check">
+            <i class="fas fa-check-circle icon"></i>
+          </div>
+        </div>
+        <div class="case">
+          <div class="case__description">
+            <h4 class="case__nom">Foie gras de canard mi-cuit</h4>
+            <p class="case__info">Et ses copeaux de truffe noire</p>
+          </div>
+          <div class="case__prix">35€</div>
+          <div class="case__check">
+            <i class="fas fa-check-circle icon"></i>
+          </div>
+        </div>
+        <div class="case">
+          <div class="case__description">
+            <h4 class="case__nom">Oeuf au plat</h4>
+            <p class="case__info">Assaisonné à la truffe sur lit de caviar</p>
+          </div>
+          <div class="case__prix">20€</div>
+          <div class="case__check">
+            <i class="fas fa-check-circle icon"></i>
+          </div>
+        </div>
+      </section>
+      <h3 class="type">Plat</h3>
+      <section class="container">
+        <div class="case">
+          <div class="case__description">
+            <h4 class="case__nom">Filet de boeuf aux herbes</h4>
+            <p class="case__info">Accompagné de sa ribambelle de légumes</p>
+          </div>
+          <div class="case__prix">40€</div>
+          <div class="case__check">
+            <i class="fas fa-check-circle icon"></i>
+          </div>
+        </div>
+        <div class="case">
+          <div class="case__description">
+            <h4 class="case__nom">Parmentier de queue de boeuf</h4>
+            <p class="case__info">À la truffe noire sur sa purée de panais</p>
+          </div>
+          <div class="case__prix">35€ </div>
+          <div class="case__check">
+            <i class="fas fa-check-circle icon"></i>
+          </div>
+        </div>
+        <div class="case">
+          <div class="case__description">
+            <h4 class="case__nom">Filet de turbot</h4>
+            <p class="case__info">Aux agrumes</p>
+          </div>
+          <div class="case__prix">44€ </div>
+          <div class="case__check">
+            <i class="fas fa-check-circle icon"></i>
+          </div>
+        </div>
+      </section>
+      <h3 class="type">Dessert</h3>
+      <section class="container">
+        <div class="case">
+          <div class="case__description">
+            <h4 class="case__nom">Paris-Brest</h4>
+            <p class="case__info">Revisité</p>
+          </div>
+          <div class="case__prix">18€ </div>
+          <div class="case__check">
+            <i class="fas fa-check-circle icon"></i>
+          </div>
+        </div>
+        <div class="case">
+          <div class="case__description">
+            <h4 class="case__nom">Macaron au chocolat d'exception</h4>
+            <p class="case__info">Et glace à la vanille de Madagascar</p>
+          </div>
+          <div class="case__prix">
+            <span>22€</span>
+          </div>
+          <div class="case__check">
+            <i class="fas fa-check-circle icon"></i>
+          </div>
+        </div>
+        <div class="case">
+          <div class="case__description">
+            <h4 class="case__nom">Mousse au chocolat</h4>
+            <p class="case__info">
+              Au piment d'Espelette et à la truffe noire
+            </p>
+          </div>
+          <div class="case__prix">23€</div>
+          <div class="case__check">
+            <i class="fas fa-check-circle icon"></i>
+          </div>
+        </div>
+      </section>
+      <div class="wrapbtn">
+        <button class="wrapbtn__bouton">Commander</button>
+      </div>
+    </div>
+  </main>
+  <!-- footer -->
+  <footer class="blocFooter">
+    <p class="blocFooter__logo">ohmyfood</p>
+    <ul class="list">
+      <li class="list__lien">
+        <i class="fas fa-utensils"></i><a>Proposer un restaurant</a>
+      </li>
+      <li class="list__lien">
+        <i class="fas fa-hands-helping"></i><a>Devenir partenaire</a>
+      </li>
+      <li class="list__lien"><a>Mentions légales</a></li>
+      <li class="list__lien">
+        <a class="list__contact" href="mailto:xxx@yz.org">Contact</a>
+      </li>
+    </ul>
+  </footer>
+</body>
+
+</html>
